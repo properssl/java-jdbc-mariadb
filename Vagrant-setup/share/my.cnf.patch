@@ -1,0 +1,24 @@
+--- /etc/mysql/my.cnf.orig	2013-07-01 16:52:11.117257419 +0000
++++ /etc/mysql/my.cnf	2013-07-01 16:52:48.360787853 +0000
+@@ -44,7 +44,7 @@
+ #
+ # Instead of skip-networking the default is now to listen only on
+ # localhost which is more compatible and is not less secure.
+-bind-address		= 127.0.0.1
++#bind-address		= 127.0.0.1
+ #
+ # * Fine Tuning
+ #
+@@ -147,9 +147,9 @@
+ #
+ # For generating SSL certificates I recommend the OpenSSL GUI "tinyca".
+ #
+-# ssl-ca=/etc/mysql/cacert.pem
+-# ssl-cert=/etc/mysql/server-cert.pem
+-# ssl-key=/etc/mysql/server-key.pem
++#ssl-ca=/etc/mysql/cacert.pem
++ssl-cert=/etc/mysql/server.crt
++ssl-key=/etc/mysql/server.key
+ 
+ 
+ 

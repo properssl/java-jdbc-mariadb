@@ -9,6 +9,8 @@ When the property `serverSslCert` is set the MariaDB JDBC driver sets up the con
 
 For more detail about configuring the MariaDB Java client driver see its [about page][MariaDB-Java-Client-Notes].
 
+For other examples of properly establishing SSL connections check out http://properssl.org/.
+
 ### Installing the JDBC driver
 At the moment the MariaDB Java client driver is not available in the central Maven repository so you have to manually install it. Here are the steps:
 

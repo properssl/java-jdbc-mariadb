@@ -3,7 +3,7 @@ This example demonstrates how to properly create an SSL connection to a MariaDB 
 
 The majority of examples on the internet of using SSL with MariaDB (and MySQL) instruct the JDBC driver to not validate the server's certificate. This is vulnerable to a [man in the middle](MITM) attack. This is particularly important with the rise of cloud based database-as-a-service platforms where client applications are connecting to the remote servers through the public internet.
 
-The latest release (as of writing this) of the MariaDB Java client driver, [v1.1.3][MariaDB-Java-Client-v1.1.3],  includes the ability to validate self signed server certificates by setting a new connection propert, `serverSslCert`. This example demonstrates how to use it to secure your JDBC connection to your database.
+The latest release (as of writing this) of the MariaDB Java client driver, [v1.1.3][MariaDB-Java-Client-v1.1.3],  includes the ability to validate self signed server certificates by setting a new connection property, `serverSslCert`. This example demonstrates how to use it to secure your JDBC connection to your database.
 
 When the property `serverSslCert` is set the MariaDB JDBC driver sets up the connection to use a TrustManager and SSLSocketFactory that can validate against a pre-shared certificate. It provides protection against MITM. Additionaly, through certificate pinning a self-signed certificate can be even more secure than one signed by a trusted certificate authority as it will also be immune to [CA] compromises.
 
